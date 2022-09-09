@@ -1,0 +1,21 @@
+{
+    "nodes": {
+        "Anshul": [
+            [
+                "Anshul",
+                "dogs"
+            ]
+        ],
+        "dogs": [
+            [
+                "Anshul",
+                "dogs"
+            ]
+        ]
+    },
+    "edges": {
+        "['Anshul', 'dogs']": [
+            "loves"
+        ]
+    }
+}
