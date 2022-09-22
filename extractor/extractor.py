@@ -77,8 +77,6 @@ def extract_relations(doc):
             relations.append(Relation(left_noun, span, right_noun))
     return relations
         
-
-
 def get_relation_spans(doc):
     """extracts the complete relations from the doc
 
