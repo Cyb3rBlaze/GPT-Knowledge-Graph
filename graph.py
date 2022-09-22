@@ -70,31 +70,7 @@ class GraphVisualization():
                 for j in self.edges[relationships[i]]:
                     return_sequence += [relationships[i][0] + " " + j + " " + relationships[i][1]]
             return return_sequence
-        return []
-    
-    def load_graph_from_json(self, json_path):
-        knowledge_graph = {}
-        with open(json_path) as f:
-            knowledge_graph = json.load(f)
-        
-        nodes = knowledge_graph['nodes']
-        edges = knowledge_graph['edges']
-        for node, relationship in nodes:
-            self.nodes[node] = relationship
-        for relation, edge in edges:
-            self.edges[relation] = edge
-
-    def graph_to_json(self, out_path):
-        graph = {
-                "nodes": {},
-                "edges": {}
-            }
-        graph["nodes"] = self.nodes
-        graph["edges"] = self.edges
-        json_object = json.dumps(graph)
-        with open(out_path, 'w') as f:
-            f.write(json_object)
-            
+        return []       
 
     def draw_graph(self):
         self.graph.add_edges_from(self.edges.keys())
