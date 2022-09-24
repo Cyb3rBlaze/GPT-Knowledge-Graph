@@ -28,8 +28,13 @@ def run(cfg):
     while step < cfg.n_steps:
         # encode the new user input, add the eos_token and return a tensor in Tensorflow
         input_text = input(">> User: ")
+
         doc = Document(input_text)
+        print(doc)
         relations = extract_relations(doc)
+
+        print(relations)
+
         # parse relations
         for relation in relations:
             ln = relation.left_phrase.sentence
